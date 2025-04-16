@@ -1,7 +1,9 @@
-def solution(my_string):
-    answer = [];
-    for i in range(len(my_string)):
-        if my_string[i].isdecimal():
-            answer.append(int(my_string[i]));
-    answer.sort()
-    return answer;
+import math
+
+def solution(n):
+    divisor = [];
+    for i in range(1, n+1):
+        if n % i == 0:
+            divisor.append(i);
+    divisor.sort();
+    return divisor;
