@@ -1,9 +1,2 @@
-import math
-
-def solution(n):
-    divisor = [];
-    for i in range(1, n+1):
-        if n % i == 0:
-            divisor.append(i);
-    divisor.sort();
-    return divisor;
+a = 10.21302913;
+print(type(a)) # <class 'float'>
