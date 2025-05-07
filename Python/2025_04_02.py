@@ -11,7 +11,6 @@ st.strip(); # 공백 제거
 iterable : 반복 가능한 것(for 가능). list, tuple, str, set, dict
 sequence: 순서를 가진 것(인덱스로 접근 가능). list, tuple, str
 collction: 원소들이 모여 있는 것 길이가 존재함. set, list, tuple, set, dict
-
 """
 
 # ------------------------------------------------------------------------
