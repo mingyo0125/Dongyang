@@ -1,5 +1,14 @@
-def solution(num, k):
-    idx = str(num).find(str(k))
-    return idx + 1 if idx >= 0 else idx
+def solution(age):
+    nums = []
+    awns = []
+    while(age > 0):
+        nums.append(age / 10)
+        age //= 10
 
-print(solution(123456, 7))
+    nums.reverse()
+
+    for num in nums:
+        print(num)
+    return 1
+
+solution(51)

@@ -3,6 +3,7 @@ import Utils
 
 Utils.PrintLine("점수 평균 계산기")
 
+# *: 가변인자(튜플), **: 가변 키워드 인자(딕셔너리)
 def weighted_average(*scores, **weights):
     sum = 0
     idx = 0

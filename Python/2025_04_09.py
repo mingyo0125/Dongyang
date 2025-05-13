@@ -6,15 +6,15 @@ b = bytes(b'hi');
 # 문자 슬라이싱
 print('python'[5:6:1]);
 
-season = ["Spring", "Summer", "Fall", "Winter"];
-print(season[2:3]);
-print(season[0:2]);
-season[0:2]= "봄", "여름";
-print(season[0:2]);
-print(season[1:3]);
-print(season[-4:-1]);
+season = ["Spring", "Summer", "Fall", "Winter"]
+print(season[2:3])
+print(season[0:2])
+season[0:2]= "봄", "여름"
+print(season[0:2])
+print(season[1:3])
+print(season[-4:-1])
 
-print(season[-3:1]);
+print(season[-3:1])
 
 """
 =으로 복사하면 얕은복사(참조를 함)
