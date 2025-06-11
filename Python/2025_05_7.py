@@ -1,4 +1,4 @@
-import Utils
+import Utils as Utils
 
 
 Utils.PrintLine("점수 평균 계산기")

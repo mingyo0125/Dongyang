@@ -1,22 +1,39 @@
+
+import java.util.HashMap;
+
 public class Study
 {
+    public static  int[] solution(String[][] genres, String[] queries)
+    {
+        HashMap<String, Integer> genreCount = new HashMap<>();
+        int[] counts = new int[queries.length];
+
+        for(String[] genre : genres)
+        {
+            for(String g : genre)
+            {
+                genreCount.put(g, genreCount.getOrDefault(g, 0) + 1);
+            }
+            
+        }
+        
+        for(int i = 0; i < queries.length; i++)
+        {
+            String query = queries[i];
+            counts[i] = genreCount.getOrDefault(query, 0);
+        }
+        return counts;
+    }
 
     public static void main(String[] args)
     {
-        int[] arr = {0,1,2,3,4,5};
-        int i = 0;
-
-        try {
-            for(i = 0; i < 7; i++)
-            {
-                System.err.println(arr[i]);
-            }
-        } catch (Exception e) {
-            System.err.println(e);
-            System.err.print(i);
-            System.err.print("번째 인덱스가 배열의 범위를 벗어났습니다.");
+        String[] dsa = {"SF", "drama", "fantasy","romance"};
+        String[][] dsaa = {{"horror", "drama", "SF"},{"horror", "detective", "suspense"},{"SF","fantasy","-"}};
+        int[] asd = solution(dsaa, dsa);
+        for(int i = 0; i < asd.length; i++)
+        {
+            System.out.println(asd[i]);
         }
-
         
     }
 }
