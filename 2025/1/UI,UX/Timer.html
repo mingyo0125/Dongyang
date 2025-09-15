@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Css/Style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <div class="time-displat stopwatch">
+          <div class="group">
+            <span>{{totalRecode}}</span>
+            <span>0</span>
+          </div>
+          <div class="separator">:</div>
+          <div class="group">
+            <span>0</span>
+            <span>0</span>
+          </div>
+          <div class="separator">.</div>
+          <div class="group">
+            <span>0</span>
+            <span>0</span>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button class="btn btn-reset">RESET</button>
+          <button class="btn btn-start">START</button>
+          <!-- <button class="btn btn-recode">RECODE</button>
+          <button class="btn btn-stop">STOP</button> -->
+        </div>
+      </main>
+    </div>
+
+    <script type="module">
+      const { createApp, ref, computed } = Vue;
+
+      createApp({
+        setup() {
+          const isStart = ref(false);
+          const INT_TIME = { minutes: 0, seconds: 0, milliseconds: 0 };
+          const totalRecode = ref({ ...INIT_TIME });
+          let timer = null;
+
+          const starTimer = () => {
+            timer = setInterval(() => {
+              totalRecode.value.milliseconds++;
+
+              if (totalRecode.value.milliseconds > 99) {
+                totalRecode.value.milliseconds = 0;
+                totalRecode.value.seconds++;
+              }
+
+              if (totalRecode.value.seconds > 59) {
+                totalRecode.value.seconds = 0;
+                totalRecode.value.minutes++;
+              }
+            }, 10);
+          };
+
+          const toggleTimer = () => {};
+
+          return {
+            totalRecode
+          };
+        }
+      });
+    </script>
+  </body>
+</html>

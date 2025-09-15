@@ -1,0 +1,36 @@
+*{
+    background-color: lightyellow;
+}
+h1 {
+text-align: center;
+color: green;
+font-family: '굴림', sans-serif;
+}
+
+h2{
+text-shadow: red 2px 2px 5px;
+}
+
+p {
+color: blue;
+size: 1.2em;
+font-family: 'MD개성체', 'serif';
+}
+
+:visited{
+    color: green;
+    }
+    
+:hover{
+    color: hotpink;
+    }
+
+li{
+margin:5px;
+color: darkblue;
+background-color: #cce5ff;
+}
+
+link {
+color: red;
+}

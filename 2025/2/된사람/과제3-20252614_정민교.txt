@@ -1,0 +1,65 @@
+#include <stdio.h>
+int main()
+{
+    int i;
+    char ch;
+    i = 1;
+    ch = 'a';
+
+    printf("%d", i);
+    printf("\n");
+    printf("%c", ch);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+int main()
+{
+    const float PI = 3.14f;
+    float radius = 6400.0f;
+
+    printf("둘레길이: %f", radius * PI * 2);
+    return 0;
+}
+
+
+#include <stdio.h>
+int main()
+{
+    double galaxies = 2000.0;
+    double stars_per_galaxy = 3500.0;
+
+    double total_stars = galaxies * stars_per_galaxy;
+
+    printf("총 별의 수: %.lf", total_stars);
+    printf("억개");
+    return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+    const float yRate = 0.035f;
+    float interest = 100000000 * (yRate / 12);
+
+    printf("1억원의 한달 이자: %f", interest);
+}
+
+
+#include <stdio.h>
+#define PI 3.14
+int main()
+{
+    const float radius = 5.37f;
+
+    printf("원 반지름: %f", radius);
+    printf("\n");
+    printf("원 면적: %f", radius * radius * PI);
+    printf("\n");
+    printf("원 둘레: %f", 2 * PI * radius);
+}
+
