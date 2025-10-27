@@ -1,0 +1,78 @@
+1
+#include <stdio.h>
+
+int main()
+{
+    double a, b;
+    scanf("%lf %lf", &a, &b);
+
+    int result = (int)a * (int)b;
+    printf("%d", result);
+}
+
+2
+#include <stdio.h>
+
+int main()
+{
+    double result = 2.2 + 3.0 + 5.0 + 7.0 + 11.0 + 13.0 + 17.0;
+    printf("%lf", result);
+}
+
+3
+#include <stdio.h>
+
+int main()
+{
+    double height, weight;
+    scanf("%lf %lf", &height, &weight);
+
+    double bmi = weight / ((height * height) * 0.0001f);
+
+    printf("%.1lf", bmi);
+}
+
+4
+#include <stdio.h>
+
+int main()
+{
+    double a, b, c, d, e;
+
+    scanf("%lf %lf %lf %lf %lf", &a, &b, &c, &d, &e);
+
+    int iSum = (int)a + (int)b + (int)c + (int)d + (int)e;
+    double dSum = (a - (int)a) + (b - (int)b) + (c - (int)c) + (d - (int)d) + (e - (int)e);
+
+    printf("정수: %d\n소수: %lf", iSum, dSum);
+}
+
+5
+#include <stdio.h>
+
+int main()
+{
+    char a;
+    scanf("%c", &a);
+    
+    for(int i = 7; i >= 0; i--)
+    {
+        int mask = a << i;
+        if (a & mask)
+        {
+            printf("1");
+        }
+        else
+        {
+            printf("0");
+        }
+    }
+}
+
+6
+#include <stdio.h>
+
+int main()
+{
+    printf("%d", (2614 + 2) % 10 + 1);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    /*
+        <배열 메소드>
+        a.concat(b); // a와 b를 연결한 새 배열
+        a.join("##"); // a 배열 를 연결한 문자열
+        a.reverse(); // a 배열 역순으로
+        a.slice(1, 2); // a 배열 1번째부터 2-1까지
+        a.sort(); // a오름차순정렬. 
+    .   toString(); // 문자열 생성
+    */
+
+        let a = new Array("호", "날", "두");
+        let b = new Array("Siu");
+
+        document.write(a + "<br>");
+        document.write(b + "<br>");
+        document.write("<hr>");
+
+        c = a.concat(b);
+        document.write(c + "<br>");
+        document.write(a + "<br>");
+        document.write("<hr>");
+
+        c = a.join("##");
+        document.write(c + "<br>");
+        document.write(a + "<br>");
+        document.write("<hr>");
+
+
+        c = a.reverse("##");
+        document.write(c + "<br>");
+        document.write(a + "<br>");
+        document.write("<hr>");
+
+
+        c = a.slice(1,2);
+        document.write(c + "<br>");
+        document.write(a + "<br>");
+        document.write("<hr>");
+
+
+        c = a.sort();
+        document.write(c + "<br>");
+        document.write(a + "<br>");
+        document.write("<hr>");
+
+        c = "호날두".toString();
+        document.write(c + "<br>");
+        document.write("<hr>");
+    </script>
+</body>
+</html>
