@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</title>
+<script>
+    //DOM 객체의 이벤트 리스너 프로퍼티에 리스너 등록
+    //onload   해당 문서(프로그램)이 메모리에 적재(로드)될 경우 이벤트 발생
+
+    let p;
+    function init(){
+        p = document.getElementById("p");
+        p.onmouseover = over;
+        p.onmouseout = out;
+    }
+
+    function over()
+    {
+        p.style.backgroundColor='orchid';
+    }
+
+    function out()
+    {
+        p.style.backgroundColor='white';
+    }
+</script>
+</head>
+    <body onload="init()">
+    <h3>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</h3>
+    <hr>
+    <p id="p">마우스 올리면 orchid 색으로 변경</p>
+</body>
+
+</html>
+

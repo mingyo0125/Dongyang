@@ -1,0 +1,67 @@
+<HTML>
+
+<HEAD>
+
+<TITLE> 자바스크립트</TITLE>
+
+<script language="javascript">
+
+    function bg_change(a){
+        if(a.bg.selectedIndex != 0){
+            document.bgColor = a.bg.options[a.bg.selectedIndex].value;
+        }
+    }
+
+    function fg_change(a){
+        if(a.fg.selectedIndex != 0){
+            document.fgColor = a.fg.options[a.fg.selectedIndex].value;
+        }
+    }
+
+
+</script>
+
+</HEAD>
+
+<BODY>
+
+<h1>목록상자</h1>
+
+<FORM>배경색상
+
+<SELECT NAME="bg" SIZE=1 onChange=bg_change(this.form)>
+
+<option selected> 배경색상
+
+<option value="red">red
+
+<option value="yellow">yellow
+
+<option value="green">green
+
+<option value="blue">blue
+
+</SELECT>
+
+글자색상
+
+<SELECT NAME="fg" SIZE=1 onChange=fg_change(this.form)>
+
+<option selected> 글자색상
+
+<option value="red">red
+
+<option value="yellow">yellow
+
+<option value="green">green
+
+<option value="blue">blue
+
+</SELECT>
+
+</FORM>
+
+</BODY>
+
+</HTML>
+

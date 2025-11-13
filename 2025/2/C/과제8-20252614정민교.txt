@@ -1,0 +1,203 @@
+1.
+#include <stdio.h>
+#define SIZE 30
+int main()
+{
+    int arr[SIZE];
+    int sum = 0;
+    for(int i = 0; i < SIZE; i++)
+    {
+        arr[i] = 3 * (i + 1);
+    }
+
+    for(int i = 0; i < SIZE; i++)
+    {
+        sum += arr[i];
+    }
+
+    printf("%d", sum);
+}
+
+
+2.
+#include <stdio.h>
+#include <stdlib.h>
+
+#define ROWSIZE 3
+#define COLSIZE 4
+int main()
+{
+    int arr[ROWSIZE][COLSIZE];
+    int sum = 0;
+
+    for(int i = 0; i < ROWSIZE; i++)
+    {
+        for(int j = 0; j < COLSIZE; j++)
+        {
+            arr[i][j] = rand();
+        }
+    }
+
+    for(int i = 0; i < ROWSIZE; i++)
+    {
+        for(int j = 0; j < COLSIZE; j++)
+        {
+            sum += arr[i][j];
+        }
+    }
+
+    printf("%lf", sum / (ROWSIZE * COLSIZE));
+}
+
+
+3.
+#include <stdio.h>
+#define SIZE 10
+int main()
+{
+    int arr[SIZE];
+    for(int i = 0; i < SIZE; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int max = arr[0];
+
+    for(int i = 0; i < SIZE; i++)
+    {
+        if(max < arr[i])
+        {
+            max = arr[i];
+        }
+    }
+
+    printf("%d", max);
+}
+
+
+4.
+#include <stdio.h>
+#define SIZE 5
+int main()
+{
+    int arr[SIZE];
+
+    for(int i = 0; i < SIZE; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    for(int i = SIZE - 1; i >= 0; i--)
+    {
+        printf("%d \n", arr[i]);
+    }
+
+}
+
+
+5.
+#include <stdio.h>
+#define SIZE 1
+int main()
+{
+    char arr[SIZE];
+
+    for(int i = 0; i < SIZE; i++)
+    {
+        scanf("%c", &arr[i]);
+    }
+
+    for(int i = 0; i < SIZE; i++)
+    {
+        if(arr[i] > 65)
+        {
+            arr[i] -= 32;
+        }
+        
+        printf("%c", arr[i]);
+    }
+
+}
+
+
+6.
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+    scanf("%d", &a);
+    int count = 0;
+    b = a;
+    while (a>0)
+    {
+        a /= 10;
+        count++;
+    }
+
+    int arr[count];
+    for(int i = 0; i < count; i++)
+    {
+        arr[count - 1 - i] = b % 10;
+        b/=10;
+    }
+
+    for(int i = 0; i < count; i++)
+    {
+        int num = arr[i];
+
+        switch (num)
+        {
+        case 0:
+            printf("zero ");
+            break;
+        case 1:
+            printf("one ");
+            break;
+        case 2:
+            printf("two ");
+            break;
+        case 3:
+            printf("three ");
+            break;    
+        case 4:
+            printf("four ");
+            break;
+        case 5:
+            printf("five ");
+            break;
+        case 6:
+            printf("six ");
+            break;
+        case 7:
+            printf("seven ");
+            break;
+        case 8:
+            printf("eight ");
+            break;
+        case 9:
+            printf("nine ");
+            break;
+        default:
+            break;
+        }
+    }
+    
+}
+
+
+7.
+#include <stdio.h>
+#define SIZE 10
+ 
+int main()
+{
+    double arr[SIZE];
+ 
+    for (int i = 0; i < SIZE; i++)
+    {
+        arr[i] = 1.0 / ((i + 2) * (i + 3));
+        printf("%d/(%d*%d) = %lf\n", 1, i + 2, i + 3, arr[i]);
+    }
+ 
+}

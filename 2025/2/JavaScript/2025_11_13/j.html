@@ -1,0 +1,35 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>with </TITLE>
+
+<script>
+
+
+function bb(x){
+    if(x == document.frm.fname){
+        alert(x.value+"값으로 변환");
+    }
+    else{
+        alert(x.value+"값을호 변환")
+    }
+}
+
+</script>
+
+</HEAD>
+
+<BODY>
+
+<FORM name=frm>
+
+이름 : <INPUT TYPE="TEXT" name=fname onChange=bb(this)><p>
+
+주소 : <INPUT TYPE="TEXT" name=faddr onChange=bb(this)><p>
+
+</FORM>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,45 @@
+<HTML>
+
+<HEAD><TITLE>타자기 효과내기</TITLE>
+
+<SCRIPT>
+
+t1 = "지금은 수업중입니다.";
+var pos = 0;
+var len = t1.length;
+
+function fun_text()
+{
+    document.form1.textfield.value = t1.substring(0,pos) + "_"
+    if(pos++==len){
+        pos = 0;
+        setTimeout("fun_text()", 1000);
+        len = t1.length;
+    } else{
+        setTimeout("fun_text()", 50);
+    }
+}
+
+// setTimeout("호출할 함수명",밀리초)  : 지정된 시간이 지나면 작성된 함수호출
+
+// .length  : 지정된 문자열의 길이 반환
+
+//.substring(시작값, 추출수) : 지정된 문자열의 시작값부터 추출수 만큼 추출한 문자값 반환 
+
+//onLoad : 이벤트 핸들러 프로그램이 실행되면 지정된 명령어 수행
+</SCRIPT></HEAD>
+
+<BODY BGCOLOR=PINK onLoad="fun_text()">
+
+<FORM NAME="form1">
+
+<P ALIGN=CENTER>
+
+<INPUT TYPE="text" NAME="textfield" SIZE="60">
+
+</P>
+
+</FORM>
+
+</BODY></HTML>
+

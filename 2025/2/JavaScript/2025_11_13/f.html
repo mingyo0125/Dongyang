@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE> 자바스크립트</TITLE>
+<script language="javascript">
+
+function check(a){
+    if(a.value.length > 3) {
+        alert("maximum 3 letters");
+        a.value = a. value.substring(0,3);
+    }
+}
+
+</script>
+
+</HEAD>
+
+<BODY>
+<h1>이름이 4글자이상이면 경고메세지 출력</h1>
+
+<FORM>
+    이름: <input type="text" name="na" onChange=check(this)><br><br>
+</FORM>
+
+</BODY>
+
+</HTML>
