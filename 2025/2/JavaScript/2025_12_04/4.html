@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>테이블을 동적으로 추가하는 예.</title>
+<script>
+function addRows() {
+    var mydoc = document;
+    var table = mydoc.getElementById("myTable");
+    
+    var tbodyElement = table.getElementsByTagName("tbody")[0];
+    if (!tbodyElement) {
+        tbodyElement = mydoc.createElement("tbody");
+        table.appendChild(tbodyElement);
+    }
+
+    var trElement = mydoc.createElement("tr");
+    var tdElement = mydoc.createElement("td");
+    var tdElement2 = mydoc.createElement("td");
+
+    var txtElement = mydoc.createTextNode("red");
+    var txtElement2 = mydoc.createTextNode("blue");
+
+    tdElement.appendChild(txtElement);
+    tdElement2.appendChild(txtElement2);
+    trElement.appendChild(tdElement);
+    trElement.appendChild(tdElement2);
+
+    tbodyElement.appendChild(trElement);
+}
+</script>
+</head>
+<body>
+<h2 id="myText"> 테이블 한줄을 추가</h2>
+
+<form>
+<table border="1" id="myTable">
+    <tr>
+        <td>사과</td><td>수박</td>
+    </tr>
+</table>
+
+<p>
+<input value="행추가" type="button" onclick="addRows();">
+</p>
+</form>
+
+</body>
+</html>

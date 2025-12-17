@@ -1,0 +1,31 @@
+<html>
+
+<head>
+
+<title>onMouseDown 이벤트 Sample!!</title>
+
+<script type="text/javascript">
+
+function choiceRange(){
+    var eEvent = window.event;
+    if(eEvent.srcElement){
+        choice = eEvent.srcElement;
+    }
+    var tname;
+    tname = choice.tagName;
+    alert(tname + "영역을 누르셨습니다.");
+}
+
+
+</script>
+
+</head>
+
+<body onmousedown="choiceRange()">
+
+<h2> H2 영역 입니다.~</h2>
+
+<p> Paragraph 영역 입니다. ~ </p>
+
+<img border="0" src="media/apple.png" alt="myBall"></body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head><meta charset="utf-8">
+
+<title>HTML DOM 트리</title></head>
+
+<body>
+
+<h3>DOM 객체 p의 프로퍼티, 스타일, 이벤트 리스너</h3>
+
+<hr>
+
+<p   id="firstP"  
+
+      style="color:blue; background:yellow" 
+
+      onclick="this.style.color='green'">
+
+     이것은 <span style="color:red">문장입니다.</span>
+</p>
+
+
+<script>
+
+let x = document.getElementById("firstP");
+//alert(x); // </p> 태그 전체를 담고 있다는 문구만 확인됨
+text - x.id + "\n"; // 태그의 id값
+text = x.tagName + "\n"; // 태그명
+text += x.innerHTML + "\n"; // 시작태그와 종료태그 내의 텍스트
+alert(text);
+
+text += x.style.color + "\n"; // 스타일 지정 색상
+text += x.onclick + "\n"; // 이벤트 발생 시 수행되는 코드
+text += x.childElementCount + "\n"; // 자식 노드의 수
+text += x.offsetWidth + "\n"; // 화면에 보여지는 화면 전체 너비
+text += x.offsetHeight + "\n"; // 화면에 보여지는 화면 전체 높이
+
+</script>
+
+</body>
+
+</html>

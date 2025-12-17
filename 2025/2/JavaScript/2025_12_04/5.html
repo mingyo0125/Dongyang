@@ -1,0 +1,59 @@
+<html>
+
+<head>
+
+<title>insertRow/deleteRow</title>
+
+<script language='javascript'>
+
+function fInsertRow()
+{
+    var mydoc = document;
+    var p = mydoc.getElementById("tb1");
+    oRow = p.insertRow(-1);
+
+    oCel1 = mydoc.createElement("td");
+    oRow.appendChild(oCel1);
+    aa = prompt("입력하세요", "");
+    oCel1.innerHTML = aa;
+
+    oCel2 = mydoc.createElement("td");
+    oRow.appendChild(oCel2);
+    aa = prompt("입력하세요", "");
+    oCel2.innerHTML = bb;
+    
+    document.getElementById('tb1').children(0).appendChild(oRow);
+}
+
+
+
+</script></head>
+
+ <body>
+
+<table id="tbl" border="1" cellspacing="0" cellpadding="0">
+
+ <tr>
+
+    <td>품   명</td>    <td>단  가</td>
+
+ </tr>
+
+</table>
+
+<br><br><br>
+
+<table border="0" cellspacing="0" cellpadding="0">
+
+ <tr>
+
+   <td align="right"><a href='#' onClick="fInsertRow()">추가</a></td>
+
+   <td align="right"><a href='#' onClick="fDeleteRow()">삭제</a></td>
+
+ </tr>
+
+</table>
+
+</body></html>
+

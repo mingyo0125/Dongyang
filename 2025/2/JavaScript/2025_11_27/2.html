@@ -1,0 +1,33 @@
+<html>
+
+   <head>
+
+      <script type="text/javascript">
+
+/*
+
+getElementById() html문서내의 지정된 id값 반환
+
+innerHTML 태그내에 포함된 내용
+
+*/
+
+function getValue()
+{
+    var x = document.getElementById("myHeader");
+    alert(x.innerHTML);
+}
+
+        
+
+      </script>
+
+   </head>
+
+   <body>
+
+      <h1 id="myHeader" onclick="getValue()">사과</h1>
+
+   </body>
+
+</html>  

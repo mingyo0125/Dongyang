@@ -1,0 +1,56 @@
+<html>
+
+<head>   <script>
+
+/*
+
+getElementsByTagName() html문서내의 지정된 태그 반환
+
+length : 지정된 갯수 반환
+
+*/
+
+function getElements()
+{
+    //var x = document.getElementsByTagName("p");
+    //var x = document.getElementsByTagName("br");
+    //var x = document.getElementsByTagName("input");
+
+     var x = document.getElementsByTagName("p");
+     alert(x.length);
+     alert(x[0].innerHTML);
+     alert(x[1].innerHTML);
+     alert(x[2].innerHTML);
+
+    var x = document.getElementsByTagName("input");
+    alert(x.length);
+    //alert(x[0].innerHTML);
+    alert(x[0].value);
+    alert(x[1].value);
+    alert(x[3].value);
+}
+
+
+
+</script></head>
+
+<body>
+
+<p>red1</p>
+
+<p>red2</p>
+
+<p>red3</p>
+
+<input type="text" size="20" /><br />
+
+<input type="text" size="20" value="22" /><br />
+
+<input type="text" size="20" value="32"/><br /><br />
+
+<input type="button" onclick="getElements()" value="How many input elements?" />
+
+   </body>
+
+</html> 
+

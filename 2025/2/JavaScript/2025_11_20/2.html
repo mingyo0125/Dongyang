@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+<title>OnKeyDown() 이벤트 Sample!!</title>
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+function numberCheckNoNumber()
+{
+    num = event.keyCode;
+
+    char = String.fromCharCode(num);
+    numCheck = /\d/; // 수치면 true 영문자면 false
+    return !numCheck.test(char);
+}
+
+
+
+</script>
+
+<form>
+
+키보드를 입력해 보세요!! 
+
+<br>
+
+<input type="text" onkeydown="return numberCheckNoNumber()" />
+
+<br><br>
+
+숫자가 입력이 안되지요?
+
+</form>
+
+</body>
+
+</html> 
+
